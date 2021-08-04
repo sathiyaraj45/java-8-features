@@ -4,6 +4,8 @@
 package com.oracle.java8;
 
 import java.time.Clock;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 /**
  *
@@ -35,6 +37,17 @@ public class ClockExample {
 		System.out.println(clock.instant());
 		//Find milliseconds from the instance
 		System.out.println(clock.millis());
+		
+		//Current System time mills
+		System.out.println(System.currentTimeMillis());
+		
+		//Find Time zone id and print the details of time zone
+		ZoneId zoneId = clock.getZone();
+		System.out.println(zoneId);
+		
+		//Find Time zone
+		ZonedDateTime zone = ZonedDateTime.now();
+		System.out.println(zone.toString());
 		
 	}
 
