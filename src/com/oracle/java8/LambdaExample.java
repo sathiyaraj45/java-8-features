@@ -17,7 +17,10 @@ import java.util.List;
  * TODO
  *
  */
-
+@FunctionalInterface
+interface Home {
+	public void Happy();
+}
 public class LambdaExample {
 	public static void main(String[] args) {
 		Person p1 = new Person("sathiyaraj", "sathiyaraj45@gmail.com", "+919244414449", LocalDate.of(1988, 7, 3), Person.Sex.MALE);
@@ -27,6 +30,12 @@ public class LambdaExample {
 		personList.add(p2);
 		printOlderPerson(personList, 30);
 		
+		//Lambda implementing
+		Home h = () -> {
+			System.out.println("Home is always live happy place for everyone.");
+		};
+		
+		h.Happy();
 	}
 	
 	private static void printOlderPerson(List<Person> persons, int age) {
