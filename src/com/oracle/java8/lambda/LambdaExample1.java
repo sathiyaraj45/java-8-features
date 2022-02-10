@@ -1,4 +1,4 @@
-package com.oracle.java8;
+package com.oracle.java8.lambda;
 
 import java.util.ArrayList;
 import java.util.List;
